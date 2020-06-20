@@ -1,0 +1,81 @@
+CREATE TABLE categories(
+    categoryId INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    categoryTitle VARCHAR(50) UNIQUE,
+    catDesc TEXT
+    );
+
+CREATE TABLE products(
+    productId INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    productTitle VARCHAR (75),
+    productPrice Float (8,2),
+    productDesc TEXT,
+    productImg VARCHAR (50),
+    categoryId INT NOT NULL,
+    FOREIGN KEY (categoryId) REFERENCES categories(categoryId)
+    );
+
+CREATE TABLE shoppertrack (
+    trackId INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    sessionId VARCHAR (32),
+    sel_productId INT,
+    sel_productQty SMALLINT,
+    sel_productSize VARCHAR(25),
+    sel_productColor VARCHAR(25),
+    date_added DATETIME
+);
+
+//order information
+CREATE TABLE orders (
+    ordersId INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    orderDate DATETIME,
+    orderName VARCHAR (100),
+    orderAddress VARCHAR (255),
+    orderCity VARCHAR (50),
+    orderState CHAR(2),
+    orderPostcode VARCHAR(10),
+    orderTel VARCHAR(25),
+    orderEmail VARCHAR(100),
+    productTotal FLOAT(6,2),
+    shippingTotal FLOAT(6,2),
+    authorization VARCHAR (50),
+    status ENUM('processed', 'pending')
+);
+
+CREATE TABLE orders_products (
+    orders_productsId INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    orderId INT,
+    sel_productId INT,
+    sel_productQty SMALLINT,
+    sel_productSize VARCHAR(25),
+    sel_productColor VARCHAR(25),
+    sel_productPrice FLOAT(6,2)
+);
+
+
+INSERT INTO categories(categoryTitle, categoryDesc) 
+VALUES('Retro', 'Retro records');
+
+INSERT INTO categories(categoryTitle, categoryDesc) 
+VALUES('Rare', 'Rare LPs');
+
+INSERT INTO products(productTitle, productPrice, productDesc, productImg, categoryId) 
+VALUES('retro1', '100', 'retro record 1', 'retro1.jpg', '1');
+INSERT INTO products(productTitle, productPrice, productDesc, productImg, categoryId) 
+VALUES('retro2', '150', 'retro record 2', 'retro2.jpg', '1');
+INSERT INTO products(productTitle, productPrice, productDesc, productImg, categoryId) 
+VALUES('retro3', '120', 'retro record 3', 'retro3.jpg', '1');
+INSERT INTO products(productTitle, productPrice, productDesc, productImg, categoryId) 
+VALUES('retro4', '120', 'retro record 4', 'retro4.jpg', '1');
+INSERT INTO products(productTitle, productPrice, productDesc, productImg, categoryId) 
+VALUES('retro5', '80', 'retro record 5', 'retro5.jpg', '1');
+
+INSERT INTO products(productTitle, productPrice, productDesc, productImg, categoryId) 
+VALUES('rare1', '80', 'rare record 1', 'rare1.jpg', '2');
+INSERT INTO products(productTitle, productPrice, productDesc, productImg, categoryId) 
+VALUES('rare2', '280', 'rare record 2', 'rare2.jpg', '2');
+INSERT INTO products(productTitle, productPrice, productDesc, productImg, categoryId) 
+VALUES('rare3', '220', 'rare record 3', 'rare3.jpg', '2');
+INSERT INTO products(productTitle, productPrice, productDesc, productImg, categoryId) 
+VALUES('rare4', '530', 'rare record 4', 'rare4.jpg', '2');
+INSERT INTO products(productTitle, productPrice, productDesc, productImg, categoryId) 
+VALUES('rare4', '530', 'rare record 4', 'rare4.jpg', '2');

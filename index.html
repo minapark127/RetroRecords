@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="dist/css/styles.css" />
+    <title>Retro Records Newtown</title>
+    <script src="https://kit.fontawesome.com/e6fa96586c.js"></script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <header>
+        <div class="header__logo">
+          <a href="index.html">
+            <h2>⏂</h2>
+            <h1>Retro<br />Records<br />Newtown</h1>
+          </a>
+        </div>
+
+        <ul class="header__nav">
+          <li id="currentPage"><a href="index.html">Home</a></li>
+          <li><a href="retro.html">Retro Records</a></li>
+          <li><a href="rare.html">Rare LPs</a></li>
+          <li><a href="src/php/cart/seestore.php?categoryId=1">Shop</a></li>
+          <li><a href="src/php/forum/index.php">Forum</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+
+        <div class="header__nav__mobile">
+          <div class="dropdown">
+            <button class="dropbtn">
+              <i class="fas fa-bars"></i>
+            </button>
+
+            <ul class="dropdown-content">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="retro.html">Retro Records</a></li>
+              <li><a href="rare.html">Rare LPs</a></li>
+              <li><a href="src/php/cart/seestore.php?categoryId=1">Shop</a></li>
+              <li><a href="src/php/forum/index.php">Forum</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+      <main class="homepage">
+        <!-- first row: img&description -->
+        <div class="retroRecordsInfo">
+          <figure></figure>
+          <section>
+            <h2>Retro Records Newtown</h2>
+            <p>Vinyl records sound better</p>
+            <p>One-stop-shop for your retro music</p>
+            <p>
+              find <a href="retro.html">retro albums</a> and
+              <a href="rare.html">rare LPs</a>
+            </p>
+          </section>
+        </div>
+        <!-- second row: newest arrivals or featured -->
+        <div class="arrivals">
+          <h3>Our newest arrivals</h3>
+          <div class="arrivals__arrivals">
+            <section class="arrival">
+              <figure></figure>
+              <div class="arrival__album">feels</div>
+              <div class="arrival__artist">Snoh Aalegra</div>
+            </section>
+            <section class="arrival">
+              <figure></figure>
+              <div class="arrival__album">blood</div>
+              <div class="arrival__artist">Rhye</div>
+            </section>
+            <section class="arrival">
+              <figure></figure>
+              <div class="arrival__album">flower</div>
+              <div class="arrival__artist">Johnny Stimson</div>
+            </section>
+            <section class="arrival">
+              <figure></figure>
+              <div class="arrival__album">angel's pulse</div>
+              <div class="arrival__artist">Blood Orange</div>
+            </section>
+            <section class="arrival">
+              <figure></figure>
+              <div class="arrival__album">Brol</div>
+              <div class="arrival__artist">Angéle</div>
+            </section>
+          </div>
+          <!-- <a href="retro.html"><input type="button" value="view more" /></a> -->
+          <a href="retro.html"><div>view more</div></a>
+        </div>
+
+        <!-- third row: find us -->
+        <div class="findUs">
+          <section>
+            <h3>find us</h3>
+            <p>More precise and natural sound from vinyl records</p>
+            <p>Experience the difference from our listening stations</p>
+            <h4>Located at the top of King st. Newtown</h4>
+            <p><a href="tel:0295191234">📞 02 9519 1234</a></p>
+            <!-- <a href="contact.html"
+              ><input type="button" value="contact us"
+            /></a> -->
+            <a href="contact.html"><div>contact us</div></a>
+          </section>
+          <figure></figure>
+        </div>
+
+        <!-- slideshow -->
+        <div class="homeRare-slide">
+          <h3>rare lps</h3>
+
+          <div class="slideshow js-slideshow">
+            <span class="js-arrow-left fas fa-chevron-circle-left"></span>
+            <div class="slideshow-placeholder">
+              <img
+                class="js-slideshowImg slide-animation"
+                src="src/images/1.jpg"
+                alt="rare record image gallery"
+              />
+            </div>
+
+            <span class="js-arrow-right fas fa-chevron-circle-right"></span>
+          </div>
+
+          <a href="rare.html"><div>view more</div></a>
+        </div>
+
+        <!-- what's on -->
+        <div class="contactNews">
+          <figure></figure>
+          <div class="contactNews-section">
+            <h2>What's on?</h2>
+            <h3>Latest news from us</h3>
+            <div class="contactNews-more">
+              <span class="js-news-more">view more</span>
+              <i class="fas fa-caret-down js-news-openBtn"></i>
+            </div>
+            <div class="news js-news hidden">
+              <h3>👉🏻 New opening hours</h3>
+              <p>We open on the weekends now!</p>
+              <h3>👉🏻 New records</h3>
+              <p>New records arriving every Tuesday. Pop in and say hi 👋🏻</p>
+              <h3>👉🏻 Membership program</h3>
+              <p>
+                Get 5 points every $100<br />
+                Redeem your points whenever you want 💸
+              </p>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <footer>
+      <ul>
+        <li class="footer__title">support</li>
+        <li>&copy; All rights reserved 2020</li>
+        <li><a href="src/copyright.docx">legals</a></li>
+      </ul>
+      <ul class="footer__border">
+        <li class="footer__title">Follow us at</li>
+        <li>
+          <a href="https://www.facebook.com/retrorecordsnewtown"
+            ><i class="fab fa-facebook"></i
+          ></a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/retrorecordsnewtown"
+            ><i class="fab fa-instagram"></i
+          ></a>
+        </li>
+      </ul>
+      <ul>
+        <li><a href="index.html">⏂</a></li>
+        <li class="footer__title">
+          <a href="index.html">Retro Records Newtown</a>
+        </li>
+        <li>
+          <a
+            href="https://www.google.com/maps?ll=-33.896321,151.179809&z=19&t=m&hl=en&gl=AU&mapclient=embed&q=283+King+St+Newtown+NSW+2042"
+            >282 King St. Newtown NSW 2042</a
+          >
+        </li>
+        <li><a href="tel:0295191234">02 9519 1234</a></li>
+        <li>
+          <a href="mailto:info@retrorecordsnewtown.com.au "
+            >info@retrorecordsnewtown.com.au
+          </a>
+        </li>
+      </ul>
+    </footer>
+    <script src="src/js/mobileMenu.js"></script>
+    <script src="src/js/slideshow.js"></script>
+    <script src="src/js/news.js"></script>
+  </body>
+</html>
